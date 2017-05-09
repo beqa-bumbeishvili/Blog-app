@@ -6,7 +6,12 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.save
+    if @article.save
+      flash[:notice] = 'Article created like a charm'
+      redirect_to article_path(@article)
+    else
+      redirect_to 'new'
+    end
   end
 
   private
