@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="alpha_blog_project_development@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.1">
+    <root id="1"/>
+    <database id="2" parent="1" name="alpha_blog_project_development">
+      <ObjectId>17287</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-05-05.17:56:25.701</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1166</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12121</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="articles_id_seq">
+      <ObjectId>17305</ObjectId>
+      <StateNumber>1166</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="10" parent="3" name="ar_internal_metadata">
+      <ObjectId>17297</ObjectId>
+      <StateNumber>1164</StateNumber>
+    </table>
+    <table id="11" parent="3" name="articles">
+      <ObjectId>17307</ObjectId>
+      <StateNumber>1166</StateNumber>
+    </table>
+    <table id="12" parent="3" name="schema_migrations">
+      <ObjectId>17289</ObjectId>
+      <StateNumber>1163</StateNumber>
+    </table>
+    <column id="13" parent="10" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1164</StateNumber>
+    </column>
+    <column id="14" parent="10" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>1164</StateNumber>
+    </column>
+    <column id="15" parent="10" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1164</StateNumber>
+    </column>
+    <column id="16" parent="10" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1164</StateNumber>
+    </column>
+    <index id="17" parent="10" name="ar_internal_metadata_pkey">
+      <ObjectId>17303</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="18" parent="10" name="ar_internal_metadata_pkey">
+      <ObjectId>17304</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="19" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1166</StateNumber>
+      <SequenceName>articles_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;articles_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="20" parent="11" name="title">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>1166</StateNumber>
+    </column>
+    <index id="21" parent="11" name="articles_pkey">
+      <ObjectId>17314</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="11" name="articles_pkey">
+      <ObjectId>17315</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>articles_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="23" parent="12" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1163</StateNumber>
+    </column>
+    <index id="24" parent="12" name="schema_migrations_pkey">
+      <ObjectId>17295</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="12" name="schema_migrations_pkey">
+      <ObjectId>17296</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
