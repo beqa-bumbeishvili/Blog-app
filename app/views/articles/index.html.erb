@@ -1,0 +1,22 @@
+<table>
+   <thead>
+       <td><strong>title</strong></td>
+       <td><strong>description</strong></td>
+       <td><strong>admin tools</strong></td>
+   </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+    <tr>
+        <td><%= article.title %></td>
+      <td><%= article.description %></td>
+      <td> <%= link_to 'show', article_path(article) %> |
+           <%= link_to 'edit', edit_article_path(article) %> |
+           <%= link_to 'delete', article_path(article), method: :delete, data: { confirm: "you goddamn sure?" } %>  </td>
+    </tr>
+      <% end %>
+    </tbody>
+</table>
+
+<p>
+  <%= link_to 'create new', new_article_path %>
+</p>
