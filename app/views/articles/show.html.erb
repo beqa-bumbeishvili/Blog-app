@@ -4,6 +4,10 @@
 <p>
   <b>article description -  </b><%= @article.description %>
 </p>
+<% binding.pry %>
+<p>
+  <b>article description -  </b><%= image_tag @article.logo.url %>
+</p>
 
 <%= link_to 'edit article', edit_article_path(@article) %>
 <%= link_to 'back to articles', articles_path %>
